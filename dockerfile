@@ -14,7 +14,7 @@ RUN apk update \
     && rm /tmp/egg-master.zip \
     && mv egg-master app \
     && cd app \
-    && npm i --registry=https://registry.npm.taobao.org \
+    && npm i \
     && npm run doc-build
 
 # DOC DEPLOY
