@@ -22,3 +22,13 @@
 
 > Docker image for Egg Docs.
 
+## Deploy
+
+```yml
+version: '2'
+services:
+  egg-docs:
+    ports:
+      - 80:80
+    image: implementsio/egg-docs
+```
