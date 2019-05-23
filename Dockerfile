@@ -1,5 +1,5 @@
 # DOC BUILD
-FROM node:8.9.4-alpine as builder
+FROM node:lts-alpine as builder
 
 ENV EGG_SOURCE=https://github.com/eggjs/egg/archive/master.zip
 
@@ -14,7 +14,8 @@ RUN apk update \
     && rm /tmp/egg-master.zip \
     && mv egg-master app \
     && cd app \
-    && npm i \
+    && npm i -g cnpm \
+    && cnpm i \
     && npm run doc-build
 
 # DOC DEPLOY
