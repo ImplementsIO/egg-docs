@@ -14,8 +14,8 @@ RUN apk update \
     && rm /tmp/egg-master.zip \
     && mv egg-master app \
     && cd app \
-    && npm i -g cnpm \
-    && cnpm i \
+    && npm i -g npminstall \
+    && npminstall \
     && npm run doc-build
 
 # DOC DEPLOY
